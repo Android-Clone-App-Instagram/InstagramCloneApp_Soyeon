@@ -14,7 +14,7 @@
    val decoration = DividerItemDecoration(applicationContext, VERTICAL)
    rv_home.addItemDecoration(decoration)
    과 같이 기본 구분선을 적용할 수 있다. (본 예제는 MyDivideLined에 Custom하는 방법을 적용하였다.)
-   
+   ![KakaoTalk_20200508_214554907](https://user-images.githubusercontent.com/43838030/81407699-ce357600-9176-11ea-8992-abf5b92c28d0.jpg)
    
 
 #### 2. clipToPadding
@@ -29,3 +29,6 @@
         android:clipToPadding="false"
         android:paddingBottom="50dp" />
  
+![KakaoTalk_20200508_212918920](https://user-images.githubusercontent.com/43838030/81407628-b3630180-9176-11ea-925d-d66762150498.jpg)
+
+![KakaoTalk_20200508_211513801_03](https://user-images.githubusercontent.com/43838030/81407649-bc53d300-9176-11ea-8ac4-705aa448ad93.jpg)
