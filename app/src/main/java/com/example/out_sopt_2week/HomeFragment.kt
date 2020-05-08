@@ -1,18 +1,18 @@
 package com.example.out_sopt_2week
 
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
+import android.graphics.Rect
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.example.out_sopt_2week.home_recycler.InstaAdapter
 import com.example.out_sopt_2week.home_recycler.InstaData
 import kotlinx.android.synthetic.main.fragment_home.*
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 class HomeFragment : Fragment() {
     lateinit var instaAdapter: InstaAdapter
@@ -29,6 +29,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         instaAdapter=InstaAdapter(view.context)
         rv_home.adapter=instaAdapter // 이 리사이클러뷰의 어답터는 InstaAdapter
+        rv_home.addItemDecoration(MyDivideLine(100, Color.CYAN)) // rv의 구분선
         loadDatas()
     }
 
@@ -61,5 +62,45 @@ class HomeFragment : Fragment() {
         }
         instaAdapter.datas=datas
         instaAdapter.notifyDataSetChanged()
+    }
+}
+
+class MyDivideLine(
+    private val dividerHeight: Int,
+    private val dividerColor: Int = Color.TRANSPARENT
+) : RecyclerView.ItemDecoration(){
+    private val paint = Paint()
+
+    override fun onDraw(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
+        myDivider(c, parent, color = dividerColor)
+    }
+
+    private fun myDivider(c: Canvas, parent: RecyclerView, color:Int){
+        paint.color=color
+
+        for(i in 0 until parent.childCount){
+            val child = parent.getChildAt(i)
+            val param = child.layoutParams as RecyclerView.LayoutParams
+
+            val dividerTop = child.bottom + param.bottomMargin
+            val dividerBottom = dividerTop + dividerHeight
+
+            c.drawRect(
+                child.left.toFloat(),
+                dividerTop.toFloat(),
+                child.right.toFloat(),
+                dividerBottom.toFloat(),
+                paint
+            )
+        }
+    }
+
+    override fun getItemOffsets(
+        outRect: Rect,
+        view: View,
+        parent: RecyclerView,
+        state: RecyclerView.State
+    ) {
+        outRect.bottom = dividerHeight
     }
 }
