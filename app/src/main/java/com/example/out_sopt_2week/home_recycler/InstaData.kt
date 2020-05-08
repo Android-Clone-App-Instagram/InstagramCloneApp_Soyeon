@@ -1,4 +1,4 @@
-package com.example.out_sopt_2week.recycler
+package com.example.out_sopt_2week.home_recycler
 
 data class InstaData(
     val userName: String,

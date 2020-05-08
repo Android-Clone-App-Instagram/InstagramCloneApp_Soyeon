@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.out_sopt_2week.recycler.InstaAdapter
-import com.example.out_sopt_2week.recycler.InstaData
+import com.example.out_sopt_2week.home_recycler.InstaAdapter
+import com.example.out_sopt_2week.home_recycler.InstaData
 import kotlinx.android.synthetic.main.fragment_home.*
 
 // TODO: Rename parameter arguments, choose names that match
