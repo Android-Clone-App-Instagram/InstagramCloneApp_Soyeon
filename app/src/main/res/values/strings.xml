@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Out_Sopt_2Week</string>
-    <string name="second_seminar">Second Seminar</string>
+    <string name="app_name">Instagram</string>
+    <string name="Instagram">Instagram</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -43,7 +43,9 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.menu_home->vp_main.currentItem=0
                 R.id.menu_book->vp_main.currentItem=1
-                R.id.menu_mypage->vp_main.currentItem=2
+                R.id.menu_new->vp_main.currentItem=1
+                R.id.menu_favorite->vp_main.currentItem=1
+                R.id.menu_mypage->vp_main.currentItem=5
             }
             true
         }

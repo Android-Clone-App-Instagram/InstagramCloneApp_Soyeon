@@ -1,4 +1,4 @@
-package com.example.out_sopt_2week
+package com.example.out_sopt_2week.yet
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,10 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.out_sopt_2week.R
 import com.example.out_sopt_2week.book_recycler.BookAdapter
 import com.example.out_sopt_2week.book_recycler.BookData
 import kotlinx.android.synthetic.main.fragment_book.*
-import kotlinx.android.synthetic.main.fragment_home.*
 
 class BookFragment : Fragment() {
     lateinit var bookAdapter: BookAdapter

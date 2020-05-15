@@ -4,8 +4,14 @@
         android:icon="@drawable/ic_home_black_24dp"
         android:title="Home"/>
     <item android:id="@+id/menu_book"
-        android:icon="@drawable/ic_book_black_24dp"
+        android:icon="@drawable/ic_search_black_24dp"
         android:title="Book"/>
+    <item android:id="@+id/menu_new"
+        android:icon="@drawable/ic_add_black_24dp"
+        android:title="new"/>
+    <item android:id="@+id/menu_favorite"
+        android:icon="@drawable/ic_favorite_border_black_24dp"
+        android:title="Favorite"/>
     <item android:id="@+id/menu_mypage"
         android:icon="@drawable/ic_perm_identity_black_24dp"
         android:title="MyPage"/>
