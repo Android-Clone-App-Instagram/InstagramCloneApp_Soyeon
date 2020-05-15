@@ -74,11 +74,11 @@ class HomeFragment : Fragment() {
 
         storydatas.apply {
             add(
-                StoryData(
-                    userId = "cat1",
-                    img_profile = "https://cdn.pixabay.com/photo/2017/02/15/12/12/cat-2068462__480.jpg"
-                )
-            )
+                    StoryData(
+                        userId = "cat1",
+                        img_profile = "https://cdn.pixabay.com/photo/2017/02/15/12/12/cat-2068462__480.jpg"
+                    )
+                    )
             add(
                 StoryData(
                     userId = "cat2",
@@ -94,6 +94,30 @@ class HomeFragment : Fragment() {
             add(
                 StoryData(
                     userId = "cat4",
+                    img_profile = "https://cdn.pixabay.com/photo/2016/01/20/13/05/cat-1151519__480.jpg"
+                )
+            )
+            add(
+                StoryData(
+                    userId = "cat5",
+                    img_profile = "https://cdn.pixabay.com/photo/2017/02/15/12/12/cat-2068462__480.jpg"
+                )
+            )
+            add(
+                StoryData(
+                    userId = "cat6",
+                    img_profile = "https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262__480.jpg"
+                )
+            )
+            add(
+                StoryData(
+                    userId = "cat7",
+                    img_profile = "https://cdn.pixabay.com/photo/2016/01/19/17/41/friends-1149841__480.jpg"
+                )
+            )
+            add(
+                StoryData(
+                    userId = "cat8",
                     img_profile = "https://cdn.pixabay.com/photo/2016/01/20/13/05/cat-1151519__480.jpg"
                 )
             )

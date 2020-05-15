@@ -19,7 +19,7 @@ class NewFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mypage, container, false)
+        return inflater.inflate(R.layout.fragment_new, container, false)
     }
 
     companion object {
