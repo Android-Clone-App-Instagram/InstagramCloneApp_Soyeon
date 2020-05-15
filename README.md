@@ -1,4 +1,5 @@
 # RecyclerView Layout
+# !!리드미 아직 수정 전!!
 ## 1. itemDecoration
    ListView에서는 
       <ListView
