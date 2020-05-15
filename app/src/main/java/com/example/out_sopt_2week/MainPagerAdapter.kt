@@ -10,13 +10,13 @@ class MainPagerAdapter(fm:FragmentManager):
    FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT){
         override fun getItem(position:Int): Fragment{
             return when(position){
-                0-> StoryFragment()
-                1-> HomeFragment()
+                0-> HomeFragment()
+                1-> StoryFragment()
                 2-> BookFragment()
                 3-> FavoriteFragment()
                 else -> MyPageFragment()
             }
         }
 
-    override fun getCount() =3
+    override fun getCount() =5
 }
