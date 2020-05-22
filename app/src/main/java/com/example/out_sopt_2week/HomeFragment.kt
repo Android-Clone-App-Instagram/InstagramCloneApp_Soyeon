@@ -12,8 +12,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.out_sopt_2week.home_recycler.InstaAdapter
 import com.example.out_sopt_2week.home_recycler.StoryAdapter
-import com.example.out_sopt_2week.home_recycler.InstaData
-import com.example.out_sopt_2week.home_recycler.StoryData
+import com.example.out_sopt_2week.data.InstaData
+import com.example.out_sopt_2week.data.StoryData
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
@@ -32,13 +32,18 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         storyAdapter=StoryAdapter(view.context)
-        rv_story.adapter=storyAdapter // 이 리사이클러뷰의 어답터는 InstaAdapter
+        rv_story.adapter=storyAdapter // 이 리사이클러뷰의 어답터는 StoryAdapter
 
         instaAdapter=InstaAdapter(view.context)
         rv_home.adapter=instaAdapter // 이 리사이클러뷰의 어답터는 InstaAdapter
-        rv_home.addItemDecoration(MyDivideLine(20, Color.LTGRAY)) // rv의 구분선
+        //rv_home.addItemDecoration(MyDivideLine(20, Color.WHITE)) // rv의 구분선
         loadDatas()
     }
+
+    /*val userName: String,
+    val img_profile:String,
+    val like: Int,
+    val contents: String*/
 
     private fun loadDatas() {
         instadatas.apply {
@@ -46,38 +51,46 @@ class HomeFragment : Fragment() {
                 InstaData(
                     userName = "cat1",
                     img_profile = "https://cdn.pixabay.com/photo/2017/02/15/12/12/cat-2068462__480.jpg",
-                    img_contents = "https://cdn.pixabay.com/photo/2018/03/26/02/05/cat-3261420__480.jpg"
+                    img_contents = "https://cdn.pixabay.com/photo/2018/03/26/02/05/cat-3261420__480.jpg",
+                    like = 222,
+                    contents = "냥스타그램 게시글 어쩌구 저쩌구 11111111"
                 )
             )
             add(
                 InstaData(
                     userName = "cat2",
                     img_profile = "https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262__480.jpg",
-                    img_contents = "https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662__480.jpg"
+                    img_contents = "https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662__480.jpg",
+                    like = 333,
+                    contents = "냥스타그램 게시글 어쩌구 저쩌구 2222222"
                 )
             )
             add(
                 InstaData(
                     userName = "cat3",
                     img_profile = "https://cdn.pixabay.com/photo/2016/01/19/17/41/friends-1149841__480.jpg",
-                    img_contents = "https://cdn.pixabay.com/photo/2017/11/14/13/06/kitty-2948404__480.jpg"
+                    img_contents = "https://cdn.pixabay.com/photo/2017/11/14/13/06/kitty-2948404__480.jpg",
+                    like = 222,
+                    contents = "냥스타그램 게시글 어쩌구 저쩌구 3333"
                 )
             )
             add(
                 InstaData(
                     userName = "cat4",
                     img_profile = "https://cdn.pixabay.com/photo/2016/01/20/13/05/cat-1151519__480.jpg",
-                    img_contents = "https://cdn.pixabay.com/photo/2016/09/07/16/19/bremen-town-musicians-1651945__480.jpg"
+                    img_contents = "https://cdn.pixabay.com/photo/2016/09/07/16/19/bremen-town-musicians-1651945__480.jpg",
+                    like = 777,
+                    contents = "냥스타그램 게시글 어쩌구 저쩌구 777777"
                 )
             )
         }
 
         storydatas.apply {
             add(
-                    StoryData(
-                        userId = "cat1",
-                        img_profile = "https://cdn.pixabay.com/photo/2017/02/15/12/12/cat-2068462__480.jpg"
-                    )
+                StoryData(
+                    userId = "cat1",
+                    img_profile = "https://cdn.pixabay.com/photo/2017/02/15/12/12/cat-2068462__480.jpg"
+                )
                     )
             add(
                 StoryData(

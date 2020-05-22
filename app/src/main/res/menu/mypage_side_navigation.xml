@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_archive"
+        android:icon="@drawable/ic_history_black_24dp"
+        android:title="보관"/>
+    <item android:id="@+id/menu_myactivity"
+        android:icon="@drawable/ic_timelapse_black_24dp"
+        android:title="내 활동"/>
+    <item android:id="@+id/menu_nametag"
+        android:icon="@drawable/ic_crop_free_black_24dp"
+        android:title="네임 태그"/>
+    <item android:id="@+id/menu_saved"
+        android:icon="@drawable/ic_bookmark_border_black_24dp"
+        android:title="저장됨"/>
+    <item android:id="@+id/menu_friends"
+        android:icon="@drawable/ic_format_list_bulleted_black_24dp"
+        android:title="친한 친구"/>
+    <item android:id="@+id/menu_search"
+        android:icon="@drawable/ic_person_add_black_24dp"
+        android:title="사람 찾아보기"/>
+</menu>

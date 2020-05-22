@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.out_sopt_2week.R
+import com.example.out_sopt_2week.data.StoryData
 
 class StoryAdapter(private val context: Context):RecyclerView.Adapter<StoryViewHolder>() {
     var datas = mutableListOf<StoryData>()

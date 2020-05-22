@@ -5,23 +5,121 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MyPageFragment">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:background="@drawable/tv_gray"
-        android:text="죄송해요 여기다가 프로필을 만들었어야했는데 제가 게을러서 아직 못만들었어요..." />
-    <!--<ImageView
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/sopt_join_logo"/>-->
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:id="@+id/tv_toobar_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:text="@string/userName"
+            android:layout_marginStart="30dp" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_keyboard_arrow_down_black_24dp"/>
+        <ImageView
+            android:id="@+id/iv_toobar_msg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="180dp"
+            android:src="@drawable/ic_dehaze_black_24dp" />
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cstMyPage"
+        android:layout_width="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_mypage_profile"
+            android:layout_width="130dp"
+            android:layout_height="0dp"
+            android:src="@drawable/profile"
+            android:layout_margin="20dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:text="60\n게시물"
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toEndOf="@+id/img_mypage_profile"
+            app:layout_constraintTop_toTopOf="@+id/img_mypage_profile"
+            app:layout_constraintBottom_toBottomOf="@+id/img_mypage_profile"/>
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:text="144\n팔로워"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_1"
+            app:layout_constraintTop_toTopOf="@+id/img_mypage_profile"
+            app:layout_constraintBottom_toBottomOf="@+id/img_mypage_profile"/>
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:text="190\n팔로잉"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_2"
+            app:layout_constraintTop_toTopOf="@+id/img_mypage_profile"
+            app:layout_constraintBottom_toBottomOf="@+id/img_mypage_profile"/>
+
+        <TextView
+            android:id="@+id/tv_mypage_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="박소연"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/img_mypage_profile"
+            app:layout_constraintStart_toStartOf="@+id/img_mypage_profile"/>
+        
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_grey_strock"
+            android:layout_margin="20dp"
+            android:text="프로필 수정"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mypage_username"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_mypage_story"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:clipToPadding="false"
+            app:layout_constraintTop_toBottomOf="@+id/btn_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:listitem="@layout/rv_item_story"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_mypage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="165dp"
+        android:layout_marginTop="410dp"
         android:clipToPadding="false"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         tools:listitem="@layout/rv_item_mypage" />

@@ -24,7 +24,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/tv_insta_username"
+                    android:id="@+id/tv_insta_username1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -40,9 +40,9 @@
                     android:id="@+id/imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="@+id/tv_insta_username"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_insta_username1"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/tv_insta_username"
+                    app:layout_constraintTop_toTopOf="@+id/tv_insta_username1"
                     app:srcCompat="@drawable/ic_more_vert_black_24dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -97,10 +97,39 @@
             android:id="@+id/img_insta_bmk"/>
 
         <TextView
+            android:id="@+id/tv_insta_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="8dp"
+            android:text="좋아요 n개"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/img_insta_like"
+            app:layout_constraintStart_toStartOf="@id/img_insta_like"/>
+
+        <TextView
+            android:id="@+id/tv_insta_username2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="8dp"
+            android:text="ID"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tv_insta_like"
+            app:layout_constraintStart_toStartOf="@id/tv_insta_like"/>
+
+
+        <TextView
+            android:id="@+id/tv_insta_contents"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            app:layout_constraintTop_toBottomOf="@id/img_insta_like"
-            app:layout_constraintStart_toStartOf="@id/img_insta_like"
-            android:id="@+id/tv_insta_contents"/>
+            android:paddingStart="8dp"
+            android:text="Instagram Contents TextVeiw"
+            app:layout_constraintTop_toBottomOf="@id/tv_insta_username2"
+            app:layout_constraintStart_toStartOf="@id/tv_insta_username2"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

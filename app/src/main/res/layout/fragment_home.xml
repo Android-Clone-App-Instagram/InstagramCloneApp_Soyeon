@@ -54,8 +54,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="165dp"
-        android:clipToPadding="false"
+        android:clipToPadding="true"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/rv_item" />
+
+
 </FrameLayout>

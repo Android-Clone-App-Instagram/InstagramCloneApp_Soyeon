@@ -6,6 +6,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.out_sopt_2week.R
+import com.example.out_sopt_2week.data.BookData
 
 class BookViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
     val title = itemView.findViewById<TextView>(R.id.tv_books)

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.out_sopt_2week.R
+import com.example.out_sopt_2week.data.BookData
 
 class BookAdapter(private val context: Context):RecyclerView.Adapter<BookViewHolder>() {
     var data_books = mutableListOf<BookData>()

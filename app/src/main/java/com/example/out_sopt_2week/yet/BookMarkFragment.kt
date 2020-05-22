@@ -11,7 +11,7 @@ import com.example.out_sopt_2week.book_recycler.BookAdapter
 import com.example.out_sopt_2week.data.BookData
 import kotlinx.android.synthetic.main.fragment_book.*
 
-class BookFragment : Fragment() {
+class BookMarkFragment : Fragment() {
     lateinit var bookAdapter: BookAdapter
     val data_books= mutableListOf<BookData>()
     override fun onCreateView(

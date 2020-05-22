@@ -1,4 +1,4 @@
-package com.example.out_sopt_2week.home_recycler
+package com.example.out_sopt_2week.data
 
 data class StoryData(
     val userId: String,
